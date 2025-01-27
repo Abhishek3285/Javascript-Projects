@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(230 230 230);
+  font-family: "Poppins", serif;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 16px 32px;
+}
+.title {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  color: rgba(72, 163, 0, 1);
+  font-size: 64px;
+}
+.title span {
+  color: #61481c;
+}
+.cardSection {
+  height: 720px;
+  width: 660px;
+  background-color: rgba(251, 251, 251, 1);
+  border-radius: 15px;
+  padding: 0 36px;
+}
+.subtitle {
+  display: flex;
+}
+.cardSection h2 {
+  margin: 18px 12px 0 0;
+}
+.cardSection .rotate {
+  margin-top: 15px;
+  animation: rotate 3s infinite linear;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+.sun {
+  position: relative;
+}
+.sun .sun-group {
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  top: 34px;
+  left: 19px;
+}
+
+.progress-label {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  font-weight: 400;
+  color: rgba(133, 133, 133, 1);
+}
+.progress-bar {
+  width: 574px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(230 230 230);
+}
+.progress-complete {
+  height: 100%;
+  max-width: 0%;
+  background-color: #48a300;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #eeffe0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: max-width 0.7s ease-in-out;
+}
+.progress-complete span {
+  visibility: hidden;
+  padding: 0 20px;
+  min-width: max-content;
+}
+
+.warning {
+  color: #ff5151;
+  font-size: 12px;
+  margin-top: 2px;
+  display: none;
+}
+.show-warning .warning {
+  display: block;
+}
+.cardSection .rect {
+  display: flex;
+  align-items: center;
+  height: 82px;
+  padding: 0 20px;
+  border: 1px solid #0000001a;
+  border-radius: 17px;
+  margin-bottom: 48px;
+  width: 98%;
+  margin-top: 30px;
+}
+.rect .firstGoal {
+  width: 100%;
+  align-self: stretch;
+  padding-left: 15px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  font-family: inherit;
+  background-color: inherit;
+}
+.firstGoal::placeholder {
+  color: #d9d9d9;
+}
+.rect .circle-checkbox {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #61481c4d;
+  background-color: #f6f6f6;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardSection .last-line {
+  text-align: center;
+  font-weight: 500;
+}
+.cardSection .footer {
+  color: #585757;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.completed .circle-checkbox {
+  background-color: #48a300;
+  border-color: #48a300;
+}
+.completed {
+  display: block;
+}
+.completed .firstGoal {
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+/* ***** media queries starts here ***** */
+@media (max-width: 576px) {
+  .title {
+    margin-block: 20px;
+    font-size: 32px;
+  }
+  .cardSection h2 {
+    margin: 10px 12px 0 0;
+  }
+  .cardSection .rotate {
+    width: 30px;
+    height: 30px;
+  }
+  .sun .sun-group {
+    height: 8px;
+    width: 7px;
+    position: absolute;
+    top: 27px;
+    left: 12px;
+  }
+  .cardSection {
+    height: 70%;
+    width: 100%;
+    background-color: rgba(251, 251, 251, 1);
+    border-radius: 8px;
+    padding: 0 18px;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+  }
+  .progress-complete span {
+    font-size: 8px;
+    padding: 0 16px;
+  }
+  .progress-label {
+    font-size: 14px;
+    margin-block: 10px;
+  }
+  .warning {
+    font-size: 12px;
+    margin: 8px 0 8px 0;
+  }
+  .last-line {
+    font-size: 12px;
+  }
+  .cardSection .footer {
+    font-size: 8px;
+    margin-top: 30px;
+  }
+  .cardSection .rect {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+    border: 1px solid #0000001a;
+    border-radius: 10px;
+    margin-bottom: 36px;
+    width: 100%;
+  }
+  .rect .circle-checkbox {
+    height: 16px;
+    width: 16px;
+  }
+  .check-icon {
+    height: 7px;
+    width: 11px;
+  }
+  .rect .firstGoal {
+    width: 100%;
+    margin-left: 10px;
+    border: none;
+    font-size: 12px;
+  }
+}
